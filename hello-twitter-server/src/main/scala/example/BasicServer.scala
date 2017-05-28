@@ -1,7 +1,9 @@
-import com.twitter.finagle.{Http, Service}
-import com.twitter.finagle.http.{Request, Response, Status}
+package example
+
+import com.twitter.finagle.{ Http, Service }
+import com.twitter.finagle.http.{ Request, Response, Status }
 import com.twitter.server.TwitterServer
-import com.twitter.util.{Await, Future}
+import com.twitter.util.{ Await, Future }
 
 object BasicServer extends TwitterServer {
   val service = new Service[Request, Response] {
