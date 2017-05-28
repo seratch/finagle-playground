@@ -1,7 +1,8 @@
 scalacOptions ++= Seq("-unchecked", "-deprecation", "-feature")
 
+// Unfortunately, it doesn't work with test deps for Finagle based projects
 // faster library dependencies resolver
-addSbtPlugin("io.get-coursier" % "sbt-coursier" % "1.0.0-RC3")
+//addSbtPlugin("io.get-coursier" % "sbt-coursier" % "1.0.0-RC3")
 
 // code formatter
 // usage: sbt "~;scalafmt;test:compile"

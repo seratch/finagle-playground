@@ -1,10 +1,28 @@
+lazy val finatraVersion = "2.10.0"
 scalaVersion := "2.12.2"
 libraryDependencies ++= Seq(
   "com.twitter" %% "twitter-server" % "1.29.0",
   // https://twitter.github.io/twitter-server/Features.html#metrics
   "com.twitter" %% "finagle-stats" % "6.44.0",
   // https://twitter.github.io/finatra/user-guide/getting-started/basics.html
-  "com.twitter" %% "finatra-http" % "2.10.0"
+  "com.twitter"                  %% "finatra-http"       % finatraVersion,
+  "com.twitter"                  %% "finatra-httpclient" % finatraVersion,
+  "org.scalatest"                %% "scalatest"          % "3.0.3" % "test",
+  "com.twitter"                  %% "finatra-http"       % finatraVersion % "test",
+  "com.twitter"                  %% "finatra-jackson"    % finatraVersion % "test",
+  "com.twitter"                  %% "inject-server"      % finatraVersion % "test",
+  "com.twitter"                  %% "inject-app"         % finatraVersion % "test",
+  "com.twitter"                  %% "inject-core"        % finatraVersion % "test",
+  "com.twitter"                  %% "inject-modules"     % finatraVersion % "test",
+  "com.google.inject.extensions" % "guice-testlib"       % "4.0" % "test",
+  "org.mockito"                  % "mockito-core"        % "1.9.5" % "test",
+  "com.twitter"                  %% "finatra-http"       % finatraVersion % "test" classifier "tests",
+  "com.twitter"                  %% "finatra-jackson"    % finatraVersion % "test" classifier "tests",
+  "com.twitter"                  %% "inject-server"      % finatraVersion % "test" classifier "tests",
+  "com.twitter"                  %% "inject-app"         % finatraVersion % "test" classifier "tests",
+  "com.twitter"                  %% "inject-core"        % finatraVersion % "test" classifier "tests",
+  "com.twitter"                  %% "inject-modules"     % finatraVersion % "test" classifier "tests",
+  "com.google.inject.extensions" % "guice-testlib"       % "4.0" % "test" classifier "tests"
 )
 
 /*

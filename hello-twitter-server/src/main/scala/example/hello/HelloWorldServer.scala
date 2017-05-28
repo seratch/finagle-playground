@@ -10,8 +10,7 @@ object HelloWorldServerMain extends HelloWorldServer
 // https://github.com/twitter/finatra/tree/develop/examples
 class HelloWorldServer extends HttpServer {
 
-// https://twitter.github.io/finatra/user-guide/http/server.html#override-default-behavior
-//
+  // https://twitter.github.io/finatra/user-guide/http/server.html#override-default-behavior
   override val defaultFinatraHttpPort: String = ":8889"
 
   override def configureHttp(router: HttpRouter) {
