@@ -1,5 +1,9 @@
 scalaVersion := "2.12.2"
-libraryDependencies += "com.twitter" %% "twitter-server" % "1.29.0"
+libraryDependencies ++= Seq(
+  "com.twitter" %% "twitter-server" % "1.29.0",
+  // https://twitter.github.io/twitter-server/Features.html#metrics
+  "com.twitter" %% "finagle-stats" % "6.44.0"
+)
 
 /*
 [error] (*:assembly) deduplicate: different file contents found in the following:
