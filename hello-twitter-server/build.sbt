@@ -2,7 +2,9 @@ scalaVersion := "2.12.2"
 libraryDependencies ++= Seq(
   "com.twitter" %% "twitter-server" % "1.29.0",
   // https://twitter.github.io/twitter-server/Features.html#metrics
-  "com.twitter" %% "finagle-stats" % "6.44.0"
+  "com.twitter" %% "finagle-stats" % "6.44.0",
+  // https://twitter.github.io/finatra/user-guide/getting-started/basics.html
+  "com.twitter" %% "finatra-http" % "2.10.0"
 )
 
 /*

@@ -7,6 +7,10 @@ addSbtPlugin("io.get-coursier" % "sbt-coursier" % "1.0.0-RC3")
 // usage: sbt "~;scalafmt;test:compile"
 addSbtPlugin("com.geirsson" % "sbt-scalafmt" % "0.6.6")
 
+// https://github.com/spray/sbt-revolver
+// usage: sbt "~;scalafmt;reStart"
+addSbtPlugin("io.spray" % "sbt-revolver" % "0.8.0")
+
 // for preparing ENSIME configuration
 // http://ensime.org/build_tools/sbt/
 // usage: sbt ensimeConfig
