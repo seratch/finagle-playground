@@ -9,7 +9,8 @@ object BasicServer extends TwitterServer {
   val service = new Service[Request, Response] {
     def apply(request: Request) = {
       val response = Response(request.version, Status.Ok)
-      response.contentString = "hello"
+      // curl -v 'localhost:8889/?message=foo'
+      response.contentString = request.params.getOrElse("message", "hello")
       Future.value(response)
     }
   }

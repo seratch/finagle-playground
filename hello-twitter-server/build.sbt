@@ -20,9 +20,9 @@ libraryDependencies += "com.twitter" %% "twitter-server" % "1.29.0"
 [error] /Users/kazuhirosera/.ivy2/cache/io.netty/netty-codec-socks/jars/netty-codec-socks-4.1.9.Final.jar:META-INF/io.netty.versions.properties
 [error] /Users/kazuhirosera/.ivy2/cache/io.netty/netty-codec-http/jars/netty-codec-http-4.1.9.Final.jar:META-INF/io.netty.versions.properties
 [error] /Users/kazuhirosera/.ivy2/cache/io.netty/netty-codec-http2/jars/netty-codec-http2-4.1.9.Final.jar:META-INF/io.netty.versions.properties
-*/
+ */
 // https://stackoverflow.com/a/39058507
 assemblyMergeStrategy in assembly := {
- case PathList("META-INF", xs @ _*) => MergeStrategy.discard
- case x => MergeStrategy.first
+  case PathList("META-INF", xs @ _ *) => MergeStrategy.discard
+  case x                              => MergeStrategy.first
 }
