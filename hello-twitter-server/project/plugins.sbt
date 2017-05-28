@@ -8,6 +8,10 @@ scalacOptions ++= Seq("-unchecked", "-deprecation", "-feature")
 // usage: sbt "~;scalafmt;test:compile"
 addSbtPlugin("com.geirsson" % "sbt-scalafmt" % "0.6.6")
 
+// just for preparing seamless IDEA settings (looks still needed)
+// usage: sbt genIdea
+addSbtPlugin("com.github.mpeltonen" % "sbt-idea" % "1.6.0")
+
 // https://github.com/spray/sbt-revolver
 // usage: sbt "~;scalafmt;reStart"
 addSbtPlugin("io.spray" % "sbt-revolver" % "0.8.0")
